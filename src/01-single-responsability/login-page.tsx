@@ -7,6 +7,9 @@ export const LoginPage = () => {
   const handleSubmit: React.FormEventHandler = (e) => {
     e.preventDefault();
     const errors = []
+    if (email === "" || password === "") {
+      return console.error("Enter an email and a password")
+    }
     if (password.length < 5) {
       errors.push("Password too short")
     }
@@ -17,7 +20,7 @@ export const LoginPage = () => {
     if (errors.length > 0) {
       console.error(errors)
     } else {
-      console.log(`Session started for email: ${email}`)
+      console.log("Session started")
     }
   }
 
@@ -31,7 +34,7 @@ export const LoginPage = () => {
 
   return (
     <div className="min-h-screen bg-amber-50 flex flex-col items-center justify-center">
-      <div className="bg-white flex flex-col items-center justify-center w-2/5 p-10 rounded-2xl gap-10">
+      <div className="bg-white flex flex-col items-center justify-center w-fit py-20 px-40 rounded-2xl gap-10">
         <div className="flex flex-col content-center items-center gap-2">
           <img src="https://picsum.photos/50/50" alt="Logo" />
           <h1 className="text-4xl">Login</h1>

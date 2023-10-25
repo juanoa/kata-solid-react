@@ -1,6 +1,6 @@
 import React from "react";
 
-export const LoginPage = () => {
+export const SingleResponsabilityPage = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 

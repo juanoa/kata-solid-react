@@ -1,13 +1,13 @@
 import {describe, expect, it, vitest} from "vitest";
 import {render, screen} from "@testing-library/react";
-import {SingleResponsabilityPage} from "./single-responsability-page.tsx";
+import {SingleResponsibilityPage} from "./single-responsibility-page.tsx";
 import {userEvent} from "@testing-library/user-event";
 
 describe("when login", () => {
   describe("and no user nor password", () => {
     it("should log and error", async () => {
       console.error = vitest.fn();
-      render(<SingleResponsabilityPage/>)
+      render(<SingleResponsibilityPage/>)
 
       const loginButton = screen.getByRole("button");
       await userEvent.click(loginButton)
@@ -18,7 +18,7 @@ describe("when login", () => {
   describe("and password too short", () => {
     it("should log and error", async () => {
       console.error = vitest.fn();
-      render(<SingleResponsabilityPage/>)
+      render(<SingleResponsibilityPage/>)
 
       const emailInput = screen.getByPlaceholderText("Email")
       await userEvent.type(emailInput, "email@domain.com")
@@ -33,7 +33,7 @@ describe("when login", () => {
   describe("and no special characters", () => {
     it("should log and error", async () => {
       console.error = vitest.fn();
-      render(<SingleResponsabilityPage/>)
+      render(<SingleResponsibilityPage/>)
 
       const emailInput = screen.getByPlaceholderText("Email")
       await userEvent.type(emailInput, "email@domain.com")
@@ -48,7 +48,7 @@ describe("when login", () => {
   describe("and username and password are OK", () => {
     it("should log and error", async () => {
       console.log = vitest.fn();
-      render(<SingleResponsabilityPage/>)
+      render(<SingleResponsibilityPage/>)
 
       const emailInput = screen.getByPlaceholderText("Email")
       await userEvent.type(emailInput, "email@domain.com")

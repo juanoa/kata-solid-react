@@ -1,5 +1,6 @@
 import React from "react";
 
+// TODO: Split responsibility
 export const SingleResponsibilityPage = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
